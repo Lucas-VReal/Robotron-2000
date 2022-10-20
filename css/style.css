@@ -37,10 +37,27 @@ main {
     position: relative;
 }
 
+.alterar {
+    margin: 0px;
+    width: 80px;
+    margin-left: 9px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+}
+
+.botoes {
+   position: top;
+   right: 20%;
+   bottom: 5%;
+   display: center;
+}
+
 .robo {
-    height: 110%;
+    height: 100%;
     z-index: 1;
-    position: absolute;
+    position: left;
+    bottom: 10%;
     left: -20%;
     top: -5%;
 }

@@ -2,6 +2,9 @@ const controle = document.querySelectorAll("[data-controle]")
 
 const estatisticas = document.querySelectorAll("[data-estatisticas]");
 
+const robotron = document.querySelector("#robotron");
+
+var colors = ["img/amarelo.png", "img/vermelho.png", "img/rosa.png", "img/preto.png", "img/azul.png", "img/branco.png"];
 
 const pecas = {
     "bracos": {
@@ -70,3 +73,6 @@ function atualizaEstatisticas(peca, soma){
 
 }
 
+function trocaImagem(cor){
+    document.querySelector(".robo").src="img/" + cor + ".png";
+ }

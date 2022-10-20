@@ -39,27 +39,32 @@ const pecas = {
 
 controle.forEach( (elemento) => { 
     elemento.addEventListener("click", (evento) => {
-        manipulaDados(evento.target.dataset.controle, evento.target.parentNode);
-        atualizaEstatisticas(evento.target.dataset.peca);
+        var soma = manipulaDados(evento.target.dataset.controle, evento.target.parentNode);
+        atualizaEstatisticas(evento.target.dataset.peca, soma);
     })
 })
 
 function manipulaDados(operacao, controle) {
     const peca = controle.querySelector("[data-contador]")
-
     if(operacao == "-" && peca.value > 0) {
         peca.value--;
+        return false;
     } else if(operacao == "+") {
         peca.value++;
+        return true;
     }
 }
 
-function atualizaEstatisticas(peca){
-    console.log(peca);
+function atualizaEstatisticas(peca, soma){
 
     estatisticas.forEach( (elemento) => {
-        console.log(elemento.textContent);
-        elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatisticas];
+        if (soma == true){
+          elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatisticas];
+        } else if (soma == false){
+        elemento.textContent = parseInt(elemento.textContent) - pecas[peca][elemento.dataset.estatisticas];
+        }else{
+            console.log("Não pode ser menor que 0");
+        }
     })
 
 

@@ -36,6 +36,6 @@
     <br>
     <p>- Escolha a cor do seu Robô clicando no botão acima do Robotron</p>
     <p>- Clique no sinal de + para aprimorar um equipamento </p>
-    <p>- Clique no sinal de - para aprimorar um equipamento </p>
+    <p>- Clique no sinal de - para retirar aprimoramento </p>
     <p>- Clique em "Iniciar Produção" para partir para o próximo Robotron </p>
 </div>
